@@ -1,0 +1,11 @@
+{
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#e54d42",
+  "backgroundColorTop": "#e54d42",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar",
+    "bottom-tab-bar": "/components/bottomTabBar/bottomTabBar"
+  }
+}

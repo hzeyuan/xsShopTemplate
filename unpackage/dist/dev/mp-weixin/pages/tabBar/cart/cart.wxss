@@ -1,0 +1,290 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.checkbox-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.checkbox-box .checkbox {
+    width: 35rpx;
+    height: 35rpx;
+    border-radius: 100%;
+    border: solid 2rpx #e54d42;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.checkbox-box .checkbox .on {
+      width: 25rpx;
+      height: 25rpx;
+      border-radius: 100%;
+      background-color: #e54d42;
+}
+.checkbox-box .text {
+    font-size: 28rpx;
+    margin-left: 10rpx;
+}
+.goods-list {
+  width: 100%;
+  padding: 20rpx 0 120rpx 0;
+}
+.goods-list .tis {
+    width: 100%;
+    height: 80vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 32rpx;
+}
+.goods-list .row {
+    width: calc(92%);
+    height: calc(22vw + 40rpx);
+    margin: 20rpx auto;
+    border-radius: 15rpx;
+    -webkit-box-shadow: 0rpx 5rpx 20rpx rgba(0, 0, 0, 0.1);
+            box-shadow: 0rpx 5rpx 20rpx rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    z-index: 4;
+    border: 0;
+}
+.goods-list .row .menu {
+      position: absolute;
+      width: 30%;
+      height: 100%;
+      right: 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      background-color: red;
+      color: #fff;
+      z-index: 2;
+}
+.goods-list .row .menu .icon {
+        color: #fff;
+}
+.goods-list .row .carrier {
+      background-color: #fff;
+      position: absolute;
+      height: 100%;
+      z-index: 3;
+}
+@-webkit-keyframes showMenu {
+0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+}
+100% {
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+}
+}
+@keyframes showMenu {
+0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+}
+100% {
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+}
+}
+@-webkit-keyframes closeMenu {
+0% {
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+}
+100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+}
+}
+@keyframes closeMenu {
+0% {
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+}
+100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+}
+}
+.goods-list .row .carrier.open {
+        -webkit-animation: showMenu 0.25s linear both;
+                animation: showMenu 0.25s linear both;
+}
+.goods-list .row .carrier.close {
+        -webkit-animation: closeMenu 0.15s linear both;
+                animation: closeMenu 0.15s linear both;
+}
+.goods-list .row .carrier .goods-info .img {
+        width: 22vw;
+        height: 22vw;
+        border-radius: 10rpx;
+        overflow: hidden;
+        -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+                flex-shrink: 0;
+}
+.goods-list .row .carrier .goods-info .img image {
+          width: 22vw;
+          height: 22vw;
+}
+.goods-list .row .carrier .goods-info .info {
+        height: 22vw;
+        overflow: hidden;
+        position: relative;
+}
+.goods-list .row .carrier .goods-info .info .title {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          text-align: justify;
+          overflow: hidden;
+}
+.goods-list .row .carrier .goods-info .info .price-number {
+          width: 100%;
+          bottom: 0rpx;
+          -webkit-box-align: end;
+          -webkit-align-items: flex-end;
+              -ms-flex-align: end;
+                  align-items: flex-end;
+          font-size: 28rpx;
+          height: 60rpx;
+}
+.goods-list .row .carrier .goods-info .info .price-number .number {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: end;
+            -webkit-align-items: flex-end;
+                -ms-flex-align: end;
+                    align-items: flex-end;
+}
+.goods-list .row .carrier .goods-info .info .price-number .number .input {
+              width: 60rpx;
+              height: 60rpx;
+              margin: 0 10rpx;
+              background-color: #f3f3f3;
+}
+.goods-list .row .carrier .goods-info .info .price-number .number .input input {
+                width: 60rpx;
+                height: 60rpx;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                text-align: center;
+                font-size: 26rpx;
+}
+.goods-list .row .carrier .goods-info .info .price-number .number .sub,
+            .goods-list .row .carrier .goods-info .info .price-number .number .add {
+              width: 45rpx;
+              height: 45rpx;
+              background-color: #f3f3f3;
+              border-radius: 5rpx;
+}
+.goods-list .row .carrier .goods-info .info .price-number .number .sub .icon,
+              .goods-list .row .carrier .goods-info .info .price-number .number .add .icon {
+                font-size: 22rpx;
+                width: 45rpx;
+                height: 45rpx;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+}
+.footer {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0rpx;
+  z-index: 5;
+}
+.footer .delBtn {
+    border: solid 1rpx #e54d42;
+    height: 50rpx;
+    border-radius: 30rpx;
+}
+.footer .btn {
+    height: 50rpx;
+    border-radius: 30rpx;
+}
+

@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar",
+    "bottom-tab-bar": "/components/bottomTabBar/bottomTabBar"
+  }
+}
